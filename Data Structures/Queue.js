@@ -56,3 +56,39 @@ class Node {
   console.log(myQueue.dequeue())
   console.log(myQueue.peek())
   console.log(myQueue.isEmpty())
+
+  
+// Implementing Queue using Array
+
+class Queue {
+    constructor(){
+      this.array = []
+    }
+    peek() {
+      return this.array[0];
+    }
+    enqueue(value){
+      return this.array.push(value)
+    }
+    dequeue(){
+      if (!this.array) {
+        return null;
+      }
+      return this.array.shift()
+    }
+    isEmpty(){
+        return !this.array.length
+    }
+  }
+  
+  const myQueue = new Queue();
+  console.log(myQueue.peek())
+  console.log(myQueue.enqueue('Hi,'))
+  console.log(myQueue.enqueue('I am'))
+  console.log(myQueue.enqueue('Sajib.'))
+  console.log(myQueue.peek())
+  console.log(myQueue.dequeue())
+  console.log(myQueue.dequeue())
+  console.log(myQueue.dequeue())
+  console.log(myQueue.peek())
+  console.log(myQueue.isEmpty())
